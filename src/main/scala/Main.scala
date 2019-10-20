@@ -18,8 +18,8 @@ object program extends App {
 
   val program: IO[Unit] = 
     for {
-      _ <- doParsingStuff.apply()
-      _ <- doPeopleStuff.apply()
+      _ <- doParsingStuff()
+      _ <- doPeopleStuff()
       _ <- IO{println(s"finished printing ###")}
     } yield ()
 
