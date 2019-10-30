@@ -1,3 +1,7 @@
+### Metals ###
+.bloop
+.metals
+
 dist/*
 target/
 lib_managed/
@@ -7,5 +11,3 @@ project/plugins/project/
 .history
 .cache
 .lib/
-.bloop/
-.metals/
