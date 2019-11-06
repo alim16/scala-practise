@@ -43,10 +43,6 @@ package object parser {
     //apply second parser if first one fails using combineK <+>
     val p = string("hello") <+> string("something")
 
-    val k:IO[Unit] = p.run("something and this") match {
-       case None => IO {println("didn't match anything")}
-       case Some(tup) => IO {println(s"'${tup._1}' remaining after matching the value '${tup._2}'")}
-    }
 //p.run("something")
 
     object doStuff {

@@ -2,24 +2,20 @@ import cats.effect.IO
 import parser.{doStuff => doParsingStuff}
 import mo.datastructs._
 import mo.people.{doStuff => doPeopleStuff}
+import com.mo.animals.{doStuff => doCatStuff}
+import myTypeClasses.{doStuff => doTypeClassStuff}
+import sequencing.{doStuff => doSequenceStuff}
+//import myTypeClasses._
 
 object program extends App {
-
-  // val iowelcome = IO {println("welcome! enter some text?")}
   // val ioread = IO {scala.io.StdIn.readLine }
-
-  // val program: IO[Unit] = 
-  //   for {
-  //     _ <- iowelcome
-  //     something <- ioread
-  //     _ <- IO {println(s"you have entered $something")}
-  //     _ <- k //value from parser
-  //   } yield ()
 
   val program: IO[Unit] = 
     for {
-      _ <- doParsingStuff()
-      _ <- doPeopleStuff()
+     // _ <- doParsingStuff()
+     // _ <- doCatStuff()
+     //_ <- doSequenceStuff()
+     _ <- doTypeClassStuff()
       _ <- IO{println(s"finished printing ###")}
     } yield ()
 
