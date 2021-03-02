@@ -2,6 +2,7 @@
 .bloop
 .metals
 
+.vscode
 dist/*
 target/
 lib_managed/
@@ -11,3 +12,4 @@ project/plugins/project/
 .history
 .cache
 .lib/
+null/
